@@ -1,0 +1,48 @@
+﻿<Window x:Class="MandatesModel.manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="manager" Height="716.268" Width="835.406">
+    <Grid x:Name="grid" Focusable="True" Margin="10,10,2,0" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="pathBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="793" FontSize="20" SelectedText="Enter path of folder..." ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible" />
+        <Button Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="718,45,0,0" FontSize="18" RenderTransformOrigin="0.436,0.535" Height="30" Click="Button_Click_1">
+            <Button.ToolTip>
+                <ToolTip FontSize="18">
+                    Нажмите, чтобы отобразить все файлы пользователя
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <ListBox x:Name="ListBox1"  Margin="10,92,446,105" MouseDoubleClick="ListBox1_OnMouseDoubleClick" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible" Panel.ZIndex="5" >
+        </ListBox>
+         <TextBox x:Name="forFiletb" HorizontalAlignment="Left" Height="435" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="408" Margin="397,136,0,0" VerticalScrollBarVisibility="Visible" Panel.ZIndex="5"/>
+        <Label x:Name="TypLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="426,92,0,0" Width="350" Height="39" FontSize="18"/>
+        <Button Content="SAVE AS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="620,590,0,0" Height="65" FontSize="36" Click="Button_Click_3">
+            <Button.ToolTip>
+                <ToolTip FontSize="18">
+                    Нажмите, чтобы сохранить изменения в файле или создать новый
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <ComboBox x:Name="UsersComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="192" Margin="177,590,0,0" Height="65" FontSize="35" SelectedIndex="0">
+            <ComboBoxItem Content="Special"/>
+            <ComboBoxItem Content="Absolut"/>
+            <ComboBoxItem Content="Secret"/>
+            <ComboBoxItem Content="TrueTank"/>
+            <ComboBox.ToolTip>
+                <ToolTip FontSize="18">
+                    Выберите нужного пользователя для отправки выделенного файла
+                </ToolTip>
+            </ComboBox.ToolTip>
+        </ComboBox>
+        <Button Content="SEND TO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="10,590,0,0" Height="65" FontSize="35" ForceCursor="True" FontWeight="Medium" Click="Button_Click_2">
+            <Button.ToolTip>
+                <ToolTip FontSize="18">
+                    Нажмите, чтобы переслать файл другому пользователю этого приложения
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+    </Grid>
+</Window>

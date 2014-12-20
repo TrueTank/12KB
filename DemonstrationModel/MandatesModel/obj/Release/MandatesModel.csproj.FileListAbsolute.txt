@@ -1,0 +1,60 @@
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\bin\Release\MandatesModel.exe.config
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.csprojResolveAssemblyReference.cache
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MainWindow.baml
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\manager.baml
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MainWindow.g.cs
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\manager.g.cs
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\App.g.cs
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel_MarkupCompile.cache
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.g.resources
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.Properties.Resources.resources
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.csproj.GenerateResource.Cache
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\bin\Release\MandatesModel.exe
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\bin\Release\MandatesModel.pdb
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.exe
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.pdb
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\bin\Release\MandatesModel.exe.config
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.exe
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.pdb
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\bin\Release\MandatesModel.exe
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\bin\Release\MandatesModel.pdb
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.csprojResolveAssemblyReference.cache
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MainWindow.baml
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\manager.baml
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MainWindow.g.cs
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\manager.g.cs
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\App.g.cs
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel_MarkupCompile.cache
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.g.resources
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.Properties.Resources.resources
+C:\Users\Public\BasicsOfInformationSecurity\MandatesModel\obj\Release\MandatesModel.csproj.GenerateResource.Cache
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\bin\Release\MandatesModel.exe.config
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.exe
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.pdb
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\bin\Release\MandatesModel.exe
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\bin\Release\MandatesModel.pdb
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.csprojResolveAssemblyReference.cache
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MainWindow.baml
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\manager.baml
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MainWindow.g.cs
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\manager.g.cs
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\App.g.cs
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MandatesModel_MarkupCompile.cache
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.g.resources
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.Properties.Resources.resources
+C:\Users\TrueTank\Documents\Visual Studio 2012\Projects\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.csproj.GenerateResource.Cache
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\bin\Release\MandatesModel.exe.config
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.exe
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.pdb
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\bin\Release\MandatesModel.exe
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\bin\Release\MandatesModel.pdb
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.csprojResolveAssemblyReference.cache
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MainWindow.baml
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\manager.baml
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MainWindow.g.cs
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\manager.g.cs
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\App.g.cs
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MandatesModel_MarkupCompile.cache
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.g.resources
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.Properties.Resources.resources
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\MandatesModel\obj\Release\MandatesModel.csproj.GenerateResource.Cache
