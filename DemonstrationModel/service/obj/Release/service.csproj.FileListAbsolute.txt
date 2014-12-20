@@ -1,0 +1,6 @@
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\service\bin\Release\service.exe.config
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\service\bin\Release\service.exe
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\service\bin\Release\service.pdb
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\service\obj\Release\service.csprojResolveAssemblyReference.cache
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\service\obj\Release\service.exe
+C:\Users\TrueTank\Documents\12KB\DemonstrationModel\service\obj\Release\service.pdb
