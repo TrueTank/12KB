@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using client.ServiceReference1;
 using Microsoft.Win32;
 
 namespace client
@@ -25,6 +26,7 @@ namespace client
         public manager(string _path, string _user, string _users)
         {
             InitializeComponent();
+            client = new Service1Client();
             pathBox.SelectAll();
             pathBox.Text = _path;
             path = _path;
@@ -54,82 +56,55 @@ namespace client
         public string user;
         public string path;
         public int count = 0;
-        //public int mode1;
         private string[] files;
-
+        private Service1Client client;
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             ListBox1.Items.Clear();
-            using (StreamWriter file = new StreamWriter(@"texts\Журнал.txt", true))
+            client.WriteToJournal("Пользователь " + user + " прошёл по пути: " + path + " в " + DateTime.Now);
+            files = client.ReadFiles(path);
+            for (int i = 0; i < files.Length; i++)
             {
-                file.WriteLine("Пользователь " + user + " прошёл по пути: " + path + " в " + DateTime.Now);
-                files = Directory.GetFiles(@path);
-                for (int i = 0; i < files.Length; i++)
-                {
-                    FileAttributes attributes = File.GetAttributes(@files[i]);
-                    ListBox1.Items.Add(files[i]);
-                }
+                ListBox1.Items.Add(files[i]);
             }
         }
 
         private void ListBox1_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            using (StreamWriter file = new StreamWriter(@"texts\Журнал.txt", true))
-            {
-                var selIts = ListBox1.SelectedItems;
-                file.WriteLine("Пользователь " + user + " открыл файл: " + selIts[0].ToString() + " в " + DateTime.Now);
-
-                using (StreamReader sr = new StreamReader(@selIts[0].ToString()))
-                {
-                    forFiletb.Text = sr.ReadToEnd();
-                    forFiletb.Focus();
-                }
-            }
+            var selIts = ListBox1.SelectedItems;
+            client.WriteToJournal("Пользователь " + user + " открыл файл: " + selIts[0].ToString() + " в " + DateTime.Now);
+            client.ReadFile(@selIts[0].ToString());
+            forFiletb.Text = client.ReadFile(@selIts[0].ToString());
+            forFiletb.Focus();
         }
 
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if (forFiletb.IsReadOnly == false)
-            {
+            
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.InitialDirectory = path;
+                saveFileDialog1.InitialDirectory = @path;
                 saveFileDialog1.Filter = "Текст (*.txt)|*.txt";
-                using (StreamWriter file = new StreamWriter(@"texts\Журнал.txt", true))
-                {
                     if (saveFileDialog1.ShowDialog() == true)
                     {
-                        string pat;
-                        using (
-                            StreamWriter sw = new StreamWriter(saveFileDialog1.OpenFile(), System.Text.Encoding.Default)
-                            )
-                        {
-                            sw.Write(forFiletb.Text);
-                            sw.Close();
-                            file.WriteLine("Пользователь " + user + " создал файл: " + saveFileDialog1.FileName + " в " + DateTime.Now);
-                        }
+                        client.SaveNewFile(forFiletb.Text,saveFileDialog1.FileName);
+                        client.WriteToJournal("Пользователь " + user + " создал файл: " + saveFileDialog1.FileName + " в " + DateTime.Now);
                     }
-                }
-            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter file = new StreamWriter(@"texts\Журнал.txt", true))
-            {
+            
                 var selIts = ListBox1.SelectedItems;
                 if (selIts.Count != 0)
                 {
                     var tmp = UsersComboBox.SelectedValue.ToString().Substring(38) + "\\from" + user +
                               selIts[0].ToString().Substring(selIts[0].ToString().Length - 5) + count;
                     File.Copy(@selIts[0].ToString(), @"texts\\" + tmp);
-                    file.WriteLine("Пользователь " + user + " передал пользователю " +
-                                   UsersComboBox.SelectedValue.ToString().Substring(38) + " файл" + selIts[0].ToString() +
-                                   " в " + DateTime.Now);
+                    client.WriteToJournal("Пользователь " + user + " передал пользователю " +
+                                   UsersComboBox.SelectedValue.ToString().Substring(38) + " файл" + selIts[0].ToString() +" в " + DateTime.Now);
                 }
                 else MessageBox.Show("Не выделен файл для передачи!", "Ошибка!");
-
-            }
         }
 
     }

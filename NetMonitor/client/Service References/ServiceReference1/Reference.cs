@@ -34,10 +34,11 @@ namespace client.ServiceReference1 {
         System.Threading.Tasks.Task<string> ReadLoginsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsStart", ReplyAction="http://tempuri.org/IService1/IsStartResponse")]
-        bool IsStart(string users, string login, string password, int mode, string path, string user);
+        client.ServiceReference1.IsStartResponse IsStart(client.ServiceReference1.IsStartRequest request);
         
+        // CODEGEN: Идет формирование контракта на сообщение, так как операция может иметь много возвращаемых значений.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsStart", ReplyAction="http://tempuri.org/IService1/IsStartResponse")]
-        System.Threading.Tasks.Task<bool> IsStartAsync(string users, string login, string password, int mode, string path, string user);
+        System.Threading.Tasks.Task<client.ServiceReference1.IsStartResponse> IsStartAsync(client.ServiceReference1.IsStartRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/WriteToJournal", ReplyAction="http://tempuri.org/IService1/WriteToJournalResponse")]
         void WriteToJournal(string a);
@@ -51,11 +52,172 @@ namespace client.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddInInput", ReplyAction="http://tempuri.org/IService1/AddInInputResponse")]
         System.Threading.Tasks.Task AddInInputAsync(string a);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsRegistration", ReplyAction="http://tempuri.org/IService1/IsRegistrationResponse")]
-        bool IsRegistration(string users, string login, string password, int mode, string path, string user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ReadFiles", ReplyAction="http://tempuri.org/IService1/ReadFilesResponse")]
+        string[] ReadFiles(string path);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ReadFiles", ReplyAction="http://tempuri.org/IService1/ReadFilesResponse")]
+        System.Threading.Tasks.Task<string[]> ReadFilesAsync(string path);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ReadFile", ReplyAction="http://tempuri.org/IService1/ReadFileResponse")]
+        string ReadFile(string path);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ReadFile", ReplyAction="http://tempuri.org/IService1/ReadFileResponse")]
+        System.Threading.Tasks.Task<string> ReadFileAsync(string path);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsRegistration", ReplyAction="http://tempuri.org/IService1/IsRegistrationResponse")]
-        System.Threading.Tasks.Task<bool> IsRegistrationAsync(string users, string login, string password, int mode, string path, string user);
+        client.ServiceReference1.IsRegistrationResponse IsRegistration(client.ServiceReference1.IsRegistrationRequest request);
+        
+        // CODEGEN: Идет формирование контракта на сообщение, так как операция может иметь много возвращаемых значений.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsRegistration", ReplyAction="http://tempuri.org/IService1/IsRegistrationResponse")]
+        System.Threading.Tasks.Task<client.ServiceReference1.IsRegistrationResponse> IsRegistrationAsync(client.ServiceReference1.IsRegistrationRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SaveNewFile", ReplyAction="http://tempuri.org/IService1/SaveNewFileResponse")]
+        void SaveNewFile(string a, string r);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SaveNewFile", ReplyAction="http://tempuri.org/IService1/SaveNewFileResponse")]
+        System.Threading.Tasks.Task SaveNewFileAsync(string a, string r);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendFile", ReplyAction="http://tempuri.org/IService1/SendFileResponse")]
+        void SendFile(string tmp, string a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendFile", ReplyAction="http://tempuri.org/IService1/SendFileResponse")]
+        System.Threading.Tasks.Task SendFileAsync(string tmp, string a);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsStart", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IsStartRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string users;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string login;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public string password;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public int mode;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=4)]
+        public string path;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=5)]
+        public string user;
+        
+        public IsStartRequest() {
+        }
+        
+        public IsStartRequest(string users, string login, string password, int mode, string path, string user) {
+            this.users = users;
+            this.login = login;
+            this.password = password;
+            this.mode = mode;
+            this.path = path;
+            this.user = user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsStartResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IsStartResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool IsStartResult;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string users;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public int mode;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public string path;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=4)]
+        public string user;
+        
+        public IsStartResponse() {
+        }
+        
+        public IsStartResponse(bool IsStartResult, string users, int mode, string path, string user) {
+            this.IsStartResult = IsStartResult;
+            this.users = users;
+            this.mode = mode;
+            this.path = path;
+            this.user = user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsRegistration", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IsRegistrationRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string users;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string login;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public string password;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public int mode;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=4)]
+        public string path;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=5)]
+        public string user;
+        
+        public IsRegistrationRequest() {
+        }
+        
+        public IsRegistrationRequest(string users, string login, string password, int mode, string path, string user) {
+            this.users = users;
+            this.login = login;
+            this.password = password;
+            this.mode = mode;
+            this.path = path;
+            this.user = user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsRegistrationResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IsRegistrationResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool IsRegistrationResult;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string users;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public int mode;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public string path;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=4)]
+        public string user;
+        
+        public IsRegistrationResponse() {
+        }
+        
+        public IsRegistrationResponse(bool IsRegistrationResult, string users, int mode, string path, string user) {
+            this.IsRegistrationResult = IsRegistrationResult;
+            this.users = users;
+            this.mode = mode;
+            this.path = path;
+            this.user = user;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -109,12 +271,29 @@ namespace client.ServiceReference1 {
             return base.Channel.ReadLoginsAsync();
         }
         
-        public bool IsStart(string users, string login, string password, int mode, string path, string user) {
-            return base.Channel.IsStart(users, login, password, mode, path, user);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        client.ServiceReference1.IsStartResponse client.ServiceReference1.IService1.IsStart(client.ServiceReference1.IsStartRequest request) {
+            return base.Channel.IsStart(request);
         }
         
-        public System.Threading.Tasks.Task<bool> IsStartAsync(string users, string login, string password, int mode, string path, string user) {
-            return base.Channel.IsStartAsync(users, login, password, mode, path, user);
+        public bool IsStart(ref string users, string login, string password, ref int mode, ref string path, ref string user) {
+            client.ServiceReference1.IsStartRequest inValue = new client.ServiceReference1.IsStartRequest();
+            inValue.users = users;
+            inValue.login = login;
+            inValue.password = password;
+            inValue.mode = mode;
+            inValue.path = path;
+            inValue.user = user;
+            client.ServiceReference1.IsStartResponse retVal = ((client.ServiceReference1.IService1)(this)).IsStart(inValue);
+            users = retVal.users;
+            mode = retVal.mode;
+            path = retVal.path;
+            user = retVal.user;
+            return retVal.IsStartResult;
+        }
+        
+        public System.Threading.Tasks.Task<client.ServiceReference1.IsStartResponse> IsStartAsync(client.ServiceReference1.IsStartRequest request) {
+            return base.Channel.IsStartAsync(request);
         }
         
         public void WriteToJournal(string a) {
@@ -133,12 +312,61 @@ namespace client.ServiceReference1 {
             return base.Channel.AddInInputAsync(a);
         }
         
-        public bool IsRegistration(string users, string login, string password, int mode, string path, string user) {
-            return base.Channel.IsRegistration(users, login, password, mode, path, user);
+        public string[] ReadFiles(string path) {
+            return base.Channel.ReadFiles(path);
         }
         
-        public System.Threading.Tasks.Task<bool> IsRegistrationAsync(string users, string login, string password, int mode, string path, string user) {
-            return base.Channel.IsRegistrationAsync(users, login, password, mode, path, user);
+        public System.Threading.Tasks.Task<string[]> ReadFilesAsync(string path) {
+            return base.Channel.ReadFilesAsync(path);
+        }
+        
+        public string ReadFile(string path) {
+            return base.Channel.ReadFile(path);
+        }
+        
+        public System.Threading.Tasks.Task<string> ReadFileAsync(string path) {
+            return base.Channel.ReadFileAsync(path);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        client.ServiceReference1.IsRegistrationResponse client.ServiceReference1.IService1.IsRegistration(client.ServiceReference1.IsRegistrationRequest request) {
+            return base.Channel.IsRegistration(request);
+        }
+        
+        public bool IsRegistration(ref string users, string login, string password, ref int mode, ref string path, ref string user) {
+            client.ServiceReference1.IsRegistrationRequest inValue = new client.ServiceReference1.IsRegistrationRequest();
+            inValue.users = users;
+            inValue.login = login;
+            inValue.password = password;
+            inValue.mode = mode;
+            inValue.path = path;
+            inValue.user = user;
+            client.ServiceReference1.IsRegistrationResponse retVal = ((client.ServiceReference1.IService1)(this)).IsRegistration(inValue);
+            users = retVal.users;
+            mode = retVal.mode;
+            path = retVal.path;
+            user = retVal.user;
+            return retVal.IsRegistrationResult;
+        }
+        
+        public System.Threading.Tasks.Task<client.ServiceReference1.IsRegistrationResponse> IsRegistrationAsync(client.ServiceReference1.IsRegistrationRequest request) {
+            return base.Channel.IsRegistrationAsync(request);
+        }
+        
+        public void SaveNewFile(string a, string r) {
+            base.Channel.SaveNewFile(a, r);
+        }
+        
+        public System.Threading.Tasks.Task SaveNewFileAsync(string a, string r) {
+            return base.Channel.SaveNewFileAsync(a, r);
+        }
+        
+        public void SendFile(string tmp, string a) {
+            base.Channel.SendFile(tmp, a);
+        }
+        
+        public System.Threading.Tasks.Task SendFileAsync(string tmp, string a) {
+            return base.Channel.SendFileAsync(tmp, a);
         }
     }
 }

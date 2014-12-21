@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Microsoft.Win32;
 
 namespace service
 {
@@ -21,7 +22,7 @@ namespace service
           string ReadLogins();
 
         [OperationContract]
-        bool IsStart(string users, string login, string password, int mode, string path, string user);
+         bool IsStart(ref string users, string login, string password, ref int mode, ref string path, ref string user);
 
 
         [OperationContract]
@@ -31,6 +32,16 @@ namespace service
         void AddInInput(string a);
 
         [OperationContract]
-        bool IsRegistration(string users, string login, string password, int mode, string path, string user);
+        string[]  ReadFiles( string path);
+
+        [OperationContract]
+        string ReadFile(string path);
+
+        [OperationContract]
+        bool IsRegistration(ref string users,  string login, string password, ref int mode, ref string path, ref string user);
+        [OperationContract]
+        void SaveNewFile(string a, string r);
+        [OperationContract]
+        void SendFile(string tmp, string a);
     }
 }

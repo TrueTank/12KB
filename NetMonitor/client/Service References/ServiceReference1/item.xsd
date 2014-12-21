@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/service/Service1/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="DoWork">
     <xs:complexType>
       <xs:sequence />
@@ -48,6 +49,10 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="IsStartResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="users" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mode" type="xs:int" />
+        <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -75,6 +80,34 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="ReadFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadFilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReadFilesResult" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadFileResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="IsRegistration">
     <xs:complexType>
       <xs:sequence>
@@ -91,7 +124,37 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="IsRegistrationResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="users" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mode" type="xs:int" />
+        <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveNewFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="a" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="r" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveNewFileResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tmp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="a" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendFileResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

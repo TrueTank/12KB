@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Text.RegularExpressions;
+using Microsoft.Win32;
 
 namespace service
 {
@@ -33,8 +34,9 @@ namespace service
         public void WriteToJournal(string a)
         {
             var file = new StreamWriter(@"texts\Журнал.txt");
-            //file.WriteLine(a + DateTime.Now);
-            //file.Close();
+            //string z = a + DateTime.Now;
+            //file.WriteLine(z);
+            file.Close();
         }
 
         public void AddInInput(string a)
@@ -45,7 +47,7 @@ namespace service
             }
         }
 
-        public bool IsRegistration(string users, string login, string password, int mode, string path, string user)
+        public bool IsRegistration(ref string users,  string login,  string password, ref int mode, ref string path, ref string user)
         {
              string pattern = @"(?<log>[A-z0-9_]+):(?<pas>[A-z0-9_]*):(?<mod>\d)";
              string newData = " " + login + ":" + password + ":3";
@@ -65,7 +67,7 @@ namespace service
             }
         }
 
-        public bool IsStart(string users, string login, string password, int mode, string path, string user)
+        public bool IsStart(ref string users,  string login,  string password, ref int mode, ref string path, ref string user)
         {
             string pattern = @"(?<log>[A-z0-9_]+):(?<pas>[A-z0-9_]*):(?<mod>\d)";
             Regex mRegex = new Regex(pattern);
@@ -89,5 +91,33 @@ namespace service
             return false;
         }
 
+        public string[] ReadFiles(string path)
+        {
+            return Directory.GetFiles(@path);
+        }
+
+        public string ReadFile(string path)
+        {
+            string temp;
+            using (StreamReader sr = new StreamReader(@path))
+            {
+                temp = sr.ReadToEnd();
+            }
+            return temp;
+        }
+
+        public void SaveNewFile(string a, string r)
+        {
+            using (StreamWriter sw = new StreamWriter(r))
+            {
+                sw.Write(a);
+                sw.Close();
+            }
+        }
+
+        public void SendFile(string tmp, string a)
+        {
+            File.Copy(@a, @"texts\\" + tmp);
+        }
     }
 }

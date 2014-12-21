@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/service/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/service/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/service/Service1/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_DoWork_InputMessage">
@@ -42,11 +43,35 @@
   <wsdl:message name="IService1_AddInInput_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddInInputResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ReadFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFiles" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReadFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFileResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_IsRegistration_InputMessage">
     <wsdl:part name="parameters" element="tns:IsRegistration" />
   </wsdl:message>
   <wsdl:message name="IService1_IsRegistration_OutputMessage">
     <wsdl:part name="parameters" element="tns:IsRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveNewFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNewFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveNewFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNewFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendFileResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="DoWork">
@@ -73,9 +98,25 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddInInput" message="tns:IService1_AddInInput_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddInInputResponse" message="tns:IService1_AddInInput_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ReadFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ReadFiles" message="tns:IService1_ReadFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ReadFilesResponse" message="tns:IService1_ReadFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ReadFile" message="tns:IService1_ReadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ReadFileResponse" message="tns:IService1_ReadFile_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="IsRegistration">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsRegistration" message="tns:IService1_IsRegistration_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsRegistrationResponse" message="tns:IService1_IsRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveNewFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SaveNewFile" message="tns:IService1_SaveNewFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SaveNewFileResponse" message="tns:IService1_SaveNewFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendFile" message="tns:IService1_SendFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendFileResponse" message="tns:IService1_SendFile_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -134,8 +175,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ReadFiles">
+      <soap:operation soapAction="http://tempuri.org/IService1/ReadFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/ReadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="IsRegistration">
       <soap:operation soapAction="http://tempuri.org/IService1/IsRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNewFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/SaveNewFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
