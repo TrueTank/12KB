@@ -43,5 +43,7 @@ namespace service
         void SaveNewFile(string a, string r);
         [OperationContract]
         void SendFile(string tmp, string a);
+        [OperationContract]
+        void DeleteFile(string a);
     }
 }

@@ -73,6 +73,12 @@
   <wsdl:message name="IService1_SendFile_OutputMessage">
     <wsdl:part name="parameters" element="tns:SendFileResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_DeleteFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/DoWork" message="tns:IService1_DoWork_InputMessage" />
@@ -117,6 +123,10 @@
     <wsdl:operation name="SendFile">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendFile" message="tns:IService1_SendFile_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendFileResponse" message="tns:IService1_SendFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteFile" message="tns:IService1_DeleteFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteFileResponse" message="tns:IService1_DeleteFile_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -213,6 +223,15 @@
     </wsdl:operation>
     <wsdl:operation name="SendFile">
       <soap:operation soapAction="http://tempuri.org/IService1/SendFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

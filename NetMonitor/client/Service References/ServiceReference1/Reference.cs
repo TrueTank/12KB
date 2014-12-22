@@ -82,6 +82,12 @@ namespace client.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendFile", ReplyAction="http://tempuri.org/IService1/SendFileResponse")]
         System.Threading.Tasks.Task SendFileAsync(string tmp, string a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteFile", ReplyAction="http://tempuri.org/IService1/DeleteFileResponse")]
+        void DeleteFile(string a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteFile", ReplyAction="http://tempuri.org/IService1/DeleteFileResponse")]
+        System.Threading.Tasks.Task DeleteFileAsync(string a);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -367,6 +373,14 @@ namespace client.ServiceReference1 {
         
         public System.Threading.Tasks.Task SendFileAsync(string tmp, string a) {
             return base.Channel.SendFileAsync(tmp, a);
+        }
+        
+        public void DeleteFile(string a) {
+            base.Channel.DeleteFile(a);
+        }
+        
+        public System.Threading.Tasks.Task DeleteFileAsync(string a) {
+            return base.Channel.DeleteFileAsync(a);
         }
     }
 }

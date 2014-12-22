@@ -81,20 +81,12 @@ namespace client
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.InitialDirectory = @path;
-                saveFileDialog1.Filter = "Текст (*.txt)|*.txt";
-                    if (saveFileDialog1.ShowDialog() == true)
-                    {
-                        client.SaveNewFile(forFiletb.Text,saveFileDialog1.FileName);
-                        client.WriteToJournal("Пользователь " + user + " создал файл: " + saveFileDialog1.FileName + " в " + DateTime.Now);
-                    }
+            SaveFileD win = new SaveFileD(forFiletb.Text, @path,user);
+            win.Show(); 
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            
                 var selIts = ListBox1.SelectedItems;
                 if (selIts.Count != 0)
                 {
@@ -103,8 +95,21 @@ namespace client
                     client.SendFile(tmp, @selIts[0].ToString());
                     client.WriteToJournal("Пользователь " + user + " передал пользователю " +
                                    UsersComboBox.SelectedValue.ToString().Substring(38) + " файл" + selIts[0].ToString() +" в " + DateTime.Now);
+                    MessageBox.Show("Файл был передан успешно", "Уведомление");
                 }
                 else MessageBox.Show("Не выделен файл для передачи!", "Ошибка!");
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var selIts = ListBox1.SelectedItems;
+            if (selIts.Count != 0)
+            {
+                client.DeleteFile(@selIts[0].ToString());
+                client.WriteToJournal("Пользователь " + user + " удалил файл " + selIts[0].ToString() + " в " + DateTime.Now);
+                MessageBox.Show("Файл был удалён", "Уведомление");
+            }
+            else MessageBox.Show("Не выделен файл для удаления!", "Ошибка!");
         }
 
     }

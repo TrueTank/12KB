@@ -19,14 +19,14 @@
         </ListBox>
         <TextBox x:Name="forFiletb" HorizontalAlignment="Left" Height="435" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="408" Margin="397,136,0,0" VerticalScrollBarVisibility="Visible" Panel.ZIndex="5"/>
         <Label x:Name="TypLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="426,92,0,0" Width="350" Height="39" FontSize="18"/>
-        <Button Content="SAVE AS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="620,590,0,0" Height="65" FontSize="36" Click="Button_Click_3">
+        <Button Content="SAVE AS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="620,590,0,0" Height="48" FontSize="36" Click="Button_Click_3">
             <Button.ToolTip>
                 <ToolTip FontSize="18">
                     Нажмите, чтобы сохранить изменения в файле или создать новый
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <ComboBox x:Name="UsersComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="192" Margin="177,590,0,0" Height="65" FontSize="35" SelectedIndex="0">
+        <ComboBox x:Name="UsersComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="178" Margin="177,590,0,0" Height="48" FontSize="35" SelectedIndex="0">
             <ComboBoxItem Content="Special"/>
             <ComboBoxItem Content="Absolut"/>
             <ComboBoxItem Content="Secret"/>
@@ -37,10 +37,17 @@
                 </ToolTip>
             </ComboBox.ToolTip>
         </ComboBox>
-        <Button Content="SEND TO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="10,590,0,0" Height="65" FontSize="35" ForceCursor="True" FontWeight="Medium" Click="Button_Click_2">
+        <Button Content="SEND TO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="10,590,0,0" Height="48" FontSize="35" ForceCursor="True" FontWeight="Medium" Click="Button_Click_2">
             <Button.ToolTip>
                 <ToolTip FontSize="18">
                     Нажмите, чтобы переслать файл другому пользователю этого приложения
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button Content="DELETE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="397,590,0,0" Height="48" FontSize="30" Click="Button_Click_4">
+            <Button.ToolTip>
+                <ToolTip FontSize="18">
+                    Нажмите, чтобы удалить выделенный файл
                 </ToolTip>
             </Button.ToolTip>
         </Button>

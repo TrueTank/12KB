@@ -58,6 +58,9 @@
     <Compile Include="manager.xaml.cs">
       <DependentUpon>manager.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SaveFileD.xaml.cs">
+      <DependentUpon>SaveFileD.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +79,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SaveFileD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

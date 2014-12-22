@@ -1,0 +1,6 @@
+c:\users\truetank\documents\12KB\NetMonitor\service\bin\Debug\service.exe.config
+c:\users\truetank\documents\12KB\NetMonitor\service\bin\Debug\service.exe
+c:\users\truetank\documents\12KB\NetMonitor\service\bin\Debug\service.pdb
+c:\users\truetank\documents\12KB\NetMonitor\service\obj\Debug\service.csprojResolveAssemblyReference.cache
+c:\users\truetank\documents\12KB\NetMonitor\service\obj\Debug\service.exe
+c:\users\truetank\documents\12KB\NetMonitor\service\obj\Debug\service.pdb

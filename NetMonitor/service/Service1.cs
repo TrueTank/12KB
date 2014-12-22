@@ -120,5 +120,10 @@ namespace service
         {
             File.Copy(@a, @"texts\\" + tmp);
         }
+
+        public void DeleteFile(string a)
+        {
+            File.Delete(@a);
+        }
     }
 }

@@ -1,0 +1,17 @@
+c:\users\truetank\documents\12KB\NetMonitor\client\bin\Debug\client.exe.config
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\MainWindow.baml
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\manager.baml
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\SaveFileD.baml
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\MainWindow.g.cs
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\manager.g.cs
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\SaveFileD.g.cs
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\App.g.cs
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\client_MarkupCompile.cache
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\client.g.resources
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\client.Properties.Resources.resources
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\client.csproj.GenerateResource.Cache
+c:\users\truetank\documents\12KB\NetMonitor\client\bin\Debug\client.exe
+c:\users\truetank\documents\12KB\NetMonitor\client\bin\Debug\client.pdb
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\client.exe
+c:\users\truetank\documents\12KB\NetMonitor\client\obj\Debug\client.pdb
