@@ -7,7 +7,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="pathBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="793" FontSize="20" SelectedText="Enter path of folder..." ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible" />
+        <TextBox x:Name="pathBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="793" FontSize="20" SelectedText="Enter path of folder..." ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible" IsReadOnly="True" />
         <Button Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="718,45,0,0" FontSize="18" RenderTransformOrigin="0.436,0.535" Height="30" Click="Button_Click_1">
             <Button.ToolTip>
                 <ToolTip FontSize="18">
@@ -44,7 +44,7 @@
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button Content="DELETE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="397,590,0,0" Height="48" FontSize="30" Click="Button_Click_4">
+        <Button Content="DELETE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176" Margin="397,590,0,0" Height="48" FontSize="35" Click="Button_Click_4">
             <Button.ToolTip>
                 <ToolTip FontSize="18">
                     Нажмите, чтобы удалить выделенный файл
