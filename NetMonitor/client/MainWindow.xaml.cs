@@ -33,7 +33,7 @@ namespace client
         {
             InitializeComponent();
              client=new Service1Client();
-             client.CleanJournal();
+             //client.CleanJournal();
             int counter = 0;
             users = client.ReadLogins();
         }
@@ -41,8 +41,8 @@ namespace client
         {
             if(client.IsStart(ref users,  tbLogin.Text,tbPassw.Text,ref mode,ref path,ref user))
             {
-                string art = "Пользователь " + user + " вошёл в систему в ";
-                client.WriteToJournal(art); 
+                
+                client.WriteToJournal("Пользователь " + user + " вошёл в систему в "); 
                 MessageBox.Show("Произведён вход в систему", "Уведомление");
                 var manage = new manager(path, user, users);
                 this.Close();

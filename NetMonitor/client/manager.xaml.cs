@@ -100,7 +100,7 @@ namespace client
                 {
                     var tmp = UsersComboBox.SelectedValue.ToString().Substring(38) + "\\from" + user +
                               selIts[0].ToString().Substring(selIts[0].ToString().Length - 5) + count;
-                    File.Copy(@selIts[0].ToString(), @"texts\\" + tmp);
+                    client.SendFile(tmp, @selIts[0].ToString());
                     client.WriteToJournal("Пользователь " + user + " передал пользователю " +
                                    UsersComboBox.SelectedValue.ToString().Substring(38) + " файл" + selIts[0].ToString() +" в " + DateTime.Now);
                 }

@@ -19,7 +19,7 @@ namespace service
         }
         public void CleanJournal()
         {
-            File.Create(@"texts\Журнал.txt");
+            File.Create(@"texts\Journal.txt");
         }
 
         public string ReadLogins()
@@ -33,10 +33,11 @@ namespace service
 
         public void WriteToJournal(string a)
         {
-            var file = new StreamWriter(@"texts\Журнал.txt");
-            //string z = a + DateTime.Now;
-            //file.WriteLine(z);
-            file.Close();
+            
+            using (StreamWriter file = new StreamWriter(@"texts\Journal.txt", true))
+            {
+                file.WriteLine(a + DateTime.Now);
+            }
         }
 
         public void AddInInput(string a)
